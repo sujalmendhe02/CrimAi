@@ -117,10 +117,10 @@ def selectMultiImage(opt_menu, menu_var):
     global img_list, current_slide, slide_caption, slide_control_panel
 
     filetype = [("images", "*.jpg *.jpeg *.png")]
-    path_list = filedialog.askopenfilenames(title="Choose atleast 5 images", filetypes=filetype)
+    path_list = filedialog.askopenfilenames(title="Choose atleast 3 images", filetypes=filetype)
 
-    if(len(path_list) < 5):
-        messagebox.showerror("Error", "Choose atleast 5 images.")
+    if(len(path_list) < 3):
+        messagebox.showerror("Error", "Choose atleast 3 images.")
     else:
         img_list = []
         current_slide = -1
@@ -411,7 +411,7 @@ def getPage2():
     pages[2].lift()
 
     basicPageSetup(2)
-    heading.configure(text="Detect Criminal")
+    heading.configure(text="Image Surveillance")
     right_frame.configure(text="Detected Criminals", fg="white")
 
     btn_grid = tk.Frame(left_frame, bg="#3E3B3C")
@@ -722,7 +722,7 @@ def getPage6():  # Object Detection
     pages[6].lift()
 
     basicPageSetup(6)
-    heading.configure(text="Detect Criminal Objects")
+    heading.configure(text="Image Surveillance")
     right_frame.configure(text="Detected Objects", fg="white")
 
     btn_grid = tk.Frame(left_frame, bg="#3E3B3C")
